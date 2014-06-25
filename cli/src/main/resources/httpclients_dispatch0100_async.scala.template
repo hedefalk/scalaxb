@@ -4,7 +4,7 @@ trait DispatchHttpClientsAsync extends HttpClientsAsync {
   lazy val httpClient = new DispatchHttpClient {}
 
   trait DispatchHttpClient extends HttpClient {
-    import dispatch._, Defaults._
+    import dispatch._, scala.concurrent.Future
 
     val http = new Http()
     //val http = new thread.Http()
